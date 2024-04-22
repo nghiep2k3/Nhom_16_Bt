@@ -1,5 +1,5 @@
 <?php
-include "./Database/connect.php";
+include "./connect.php";
 echo $test;
 
 // tạo database
