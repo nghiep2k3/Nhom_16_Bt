@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background: url(./assest/img/loginimg.jpg);
+    background-size: cover;
+    font-family: sans-serif; */
+}
+.form_box {
+    border-radius: 2.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+    height: 450px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    background: rgba(83, 80, 77,0.6);
+    padding-bottom: 5%;
+    padding-top: 50px;
+}
+h2 {
+    margin: 0;
+    padding: 0 0 40px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.form_box p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+.form_box input {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.form_box input[type="text"],
+.form_box input[type="password"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+}
+.form_box input[type="submit"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(182, 134, 82,0.6);
+    cursor: pointer;
+    border-radius: 20px;
+    height: 50px;
+    margin-top: 20px;
+}
+.form_box input[type="submit"]:hover {
+    background: rgba(226, 187, 110, 0.6);
+    color: #fff;
+}
+.form_box a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.form_box p {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+::placeholder {
+    color: rgba(255, 255, 255,0.5);
+}
