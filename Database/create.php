@@ -3,7 +3,7 @@ include "./connect.php";
 echo $test;
 
 // tạo database
-$sql = "CREATE DATABASE nghiep1320";
+$sql = "CREATE DATABASE thanhvien";
 
 // thực thi truy vấn đề tạo
 if (mysqli_query($connect, $sql)) {
