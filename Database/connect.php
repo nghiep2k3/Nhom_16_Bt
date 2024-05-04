@@ -4,7 +4,6 @@ $user = 'root';
 $pass = '';
 $database = 'database';
 
-$test = 123;
 
 $connect = new mysqli(
     $server,

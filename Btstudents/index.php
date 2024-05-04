@@ -29,6 +29,21 @@ td {
     if ($conn->connect_error) {
         die("Kết nối CSDL thất bại: " . $connect->connect_error);
     }
+    $sqlCreateTable = "CREATE TABLE IF NOT EXISTS dangky (
+        MSSV INT(50),
+        MaMH VARCHAR(100),
+        Ky INT(50),
+        PRIMARY KEY (MSSV, MaMH, Ky),
+        FOREIGN KEY (MSSV) REFERENCES sinhvien(MSSV),
+        FOREIGN KEY (MaMH) REFERENCES monhoc(MaMH)
+    )";
+
+    if ($conn->query($sqlCreateTable) === TRUE) {
+        echo "Tạo bảng dangky thành công!";
+    } else {
+        echo "Lỗi tạo bảng dangky: " . $conn->error;
+    }
+
     $sql = "SELECT sinhvien.MSSV, sinhvien.HoTen, monhoc.MaMH, monhoc.TenMH, dangky.Ky
             FROM dangky
             JOIN sinhvien ON dangky.MSSV = sinhvien.MSSV
