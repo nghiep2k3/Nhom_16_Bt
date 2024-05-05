@@ -36,15 +36,13 @@
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload File" name="submit">
     </form>
-
     <?php
     // Xử lý upload file
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-        $target_dir = "C:\\xampp\\htdocs\\php\\Upload\\Image\\"; // Thư mục lưu trữ file đã tải lên
+        $target_dir = "Nhom_16_Bt\\Upload\\Image\\";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
         // Kiểm tra xem tập tin đã tồn tại chưa
         if (file_exists($target_file)) {
             echo "Xin lỗi, tập tin đã tồn tại.";
