@@ -10,6 +10,8 @@ if (mysqli_query($connect, $sql)) {
     echo "tạo thành công";
 } else {
     echo "tạo không thành công";
+    echo "test2";
+
 }
 
 ?>
