@@ -1,7 +1,13 @@
-CREATE DATABASE QUANLYSACH;
 <?php
-    include "connect.php";
+    $servername = "localhost:4306";
+    $username = "root";
+    $password = "";
+    $conn = new mysqli($servername, $username, $password);
+    if ($conn->connect_error) {
+        die("Kết nối thất bại " . $conn->connect_error);
+}
     $sqlCreateDatabase = "CREATE DATABASE IF NOT EXISTS QUANLYSACH";
+    include "connect.php";
     if ($conn->query($sqlCreateDatabase) === TRUE) {
         echo "Tạo cơ sở dữ liệu thành công<br>";
     } else {
