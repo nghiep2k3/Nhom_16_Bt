@@ -5,7 +5,7 @@ CREATE DATABASE QUANLYSACH;
 $server = 'localhost:4306';
 $user = 'root';
 $pass = '';
-$database = 'database';
+$database = 'QUANLYSACH';
 
 
 $connect = new mysqli(
