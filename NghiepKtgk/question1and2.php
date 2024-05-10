@@ -1,18 +1,14 @@
-CREATE DATABASE QUANLYSACH;
 <?php
 
-// kết nối
+// tạo kết nối vì chưa có database lên chưa cần khai báo, khi đọc đến dòng 22 thì tạo cơ sở dữ liệu 
 $server = 'localhost:4306';
 $user = 'root';
 $pass = '';
-$database = 'QUANLYSACH';
-
 
 $connect = new mysqli(
     $server,
     $user,
     $pass,
-    $database
 );
 
 if ($connect) {
@@ -22,13 +18,18 @@ if ($connect) {
     echo "error";
 }
 
-// câu lệnh sql để tạo bảng
+// câu lệnh sql để tạo database
 $sqlCreateDatabase = "CREATE DATABASE IF NOT EXISTS QUANLYSACH";
-if ($conn->query($sqlCreateDatabase) === TRUE) {
+if ($connect->query($sqlCreateDatabase) === TRUE) {
     echo "Tạo cơ sở dữ liệu thành công<br>";
 } else {
-    echo "Lỗi khi tạo cơ sở dữ liệu: " . $conn->error . "<br>";
+    echo "Lỗi khi tạo cơ sở dữ liệu: " . $connect->error . "<br>";
 }
+
+// kết nối đến database
+include './connect.php';
+
+
 $conn->select_db("QUANLYSACH");
 $sqlCreateTableSach = "CREATE TABLE IF NOT EXISTS Sach (
         MaSach INT AUTO_INCREMENT PRIMARY KEY,

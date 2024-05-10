@@ -2,19 +2,19 @@
 $server = 'localhost:4306';
 $user = 'root';
 $pass = '';
-$database = 'database';
+$database = 'QUANLYSACH';
 
 
-$connect = new mysqli(
+$conn = new mysqli(
     $server,
     $user,
     $pass,
     $database
 );
 
-if ($connect) {
-    mysqli_query($connect, "SET NAMES 'utf8' ");
-    echo "success";
+if ($conn) {
+    mysqli_query($conn, "SET NAMES 'utf8' ");
+    echo "Kết nối thành công";
 } else {
     echo "error";
 }
