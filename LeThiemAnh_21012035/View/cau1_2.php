@@ -1,5 +1,16 @@
-CREATE DATABASE QUANLYSACH;
 <?php
+$servername = "localhost:4306";
+$username = "root";
+$password = " ";
+$dbname = "QUANLYSACH";
+
+
+$connect = new mysqli(
+    $servername,
+    $username,
+    $password,
+);
+
     include "connect.php";
     $sqlCreateDatabase = "CREATE DATABASE IF NOT EXISTS QUANLYSACH";
     if ($conn->query($sqlCreateDatabase) === TRUE) {
